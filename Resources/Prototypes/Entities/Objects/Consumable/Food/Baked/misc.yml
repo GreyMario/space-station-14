@@ -494,6 +494,9 @@
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/brownie.rsi
     state: brownie-batch
+  - type: Item
+    shape:
+    - 0,0,2,1
   - type: SolutionContainerManager
     solutions:
       food:
@@ -545,6 +548,9 @@
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/brownie.rsi
     state: brownie-batch
+  - type: Item
+    shape:
+    - 0,0,2,1
   - type: SolutionContainerManager
     solutions:
       food:
@@ -574,6 +580,8 @@
   - type: Sprite
     sprite: Objects/Consumable/Food/snacks.rsi
     state: mre-brownie-open
+  - type: Food
+    transferAmount: 17 #lets you eat the brownie in 2 bites despite its MASSIVE contents
   - type: SolutionContainerManager
     solutions:
       food:

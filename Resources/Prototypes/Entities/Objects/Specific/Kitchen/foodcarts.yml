@@ -47,7 +47,7 @@
       - key: enum.StorageUiKey.Key
         type: StorageBoundUserInterface
     - type: Storage
-      maxItemSize: Normal
+      maxItemSize: Large #so you can put a whole pizza inside
       grid:
       - 0,0,7,4
     - type: TileFrictionModifier

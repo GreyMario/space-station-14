@@ -22,6 +22,8 @@
           Quantity: 5
   - type: SliceableFood
     count: 4
+  - type: Item
+    size: Normal
   - type: Tag
     tags:
     - Pie

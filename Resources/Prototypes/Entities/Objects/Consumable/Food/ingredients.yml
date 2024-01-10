@@ -476,6 +476,8 @@
   - type: FlavorProfile
     flavors:
       - cheesy
+  - type: Item
+    size: Normal
   - type: Sprite
     state: cheesewheel
   - type: SliceableFood
@@ -511,6 +513,8 @@
     flavors:
       - nutty
       - creamy
+  - type: Item
+    size: Normal
   - type: Sprite
     state: chevrelog
   - type: SliceableFood
@@ -557,6 +561,8 @@
   - type: FlavorProfile
     flavors:
       - tofu
+  - type: Item
+    size: Normal
   - type: Sprite
     state: tofu
   - type: SolutionContainerManager

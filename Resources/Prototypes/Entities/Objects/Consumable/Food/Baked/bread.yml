@@ -12,6 +12,9 @@
   - type: Food
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/bread.rsi
+  - type: Item
+    shape:
+    - 0,0,2,1
   - type: Tag
     tags:
     - Bread
@@ -29,7 +32,9 @@
   abstract: true
   components:
   - type: Item
-    size: Tiny
+    size: Small
+    shape:
+    - 0,0,0,1
   - type: FlavorProfile
     flavors:
       - bread
@@ -625,6 +630,10 @@
   components:
   - type: Sprite
     state: crostini
+  - type: Item #12 slices out of a 3x2 item makes for a tiny slice indeed
+    size: Tiny
+    shape:
+    - 0,0,0,0
   - type: SolutionContainerManager
     solutions:
       food:

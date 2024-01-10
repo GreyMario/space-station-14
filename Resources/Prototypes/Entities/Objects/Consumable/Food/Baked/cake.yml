@@ -23,6 +23,8 @@
           Quantity: 5
   - type: Item
     size: Normal
+    shape:
+    - 0,0,2,1
 
 - type: entity
   parent: FoodCakeBase
@@ -44,7 +46,9 @@
         - ReagentId: Vitamin
           Quantity: 1
   - type: Item
-    size: Tiny
+    size: Small
+    shape:
+    - 0,0,0,1
 
 # Custom Cake Example
 

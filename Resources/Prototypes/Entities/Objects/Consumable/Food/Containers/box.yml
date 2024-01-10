@@ -209,11 +209,13 @@
   # TODO make these entitystorage again + placeablesurface after entity storage ECS gets merged.
   - type: Storage
     grid:
-    - 0,0,1,1
-    maxItemSize: Normal
+    - 0,0,3,1
+    maxItemSize: Large
   - type: Item
     sprite: Objects/Consumable/Food/Baked/pizza.rsi
     heldPrefix: box
+    shape:
+    - 0,0,3,1 #make sure it's shaped the same as its contents
   - type: Appearance
   - type: EntityStorageVisuals
     stateDoorOpen: box-open

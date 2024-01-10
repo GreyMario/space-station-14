@@ -985,6 +985,8 @@
   id: ProduceSliceBase
   abstract: true
   components:
+  - type: Item
+    size: Tiny
   - type: SolutionContainerManager
     solutions:
       food:
