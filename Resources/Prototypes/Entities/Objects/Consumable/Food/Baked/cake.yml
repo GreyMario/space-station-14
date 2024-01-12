@@ -94,6 +94,15 @@
     state: plain
   - type: SliceableFood
     slice: FoodCakePlainSlice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 25
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 17
+        - ReagentId: Vitamin
+          Quantity: 3
 
 # Added in type lines above
 
@@ -104,6 +113,15 @@
   components:
   - type: Sprite
     state: plain-slice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 3.4
+        - ReagentId: Vitamin
+          Quantity: 0.6
 # Tastes like sweetness, cake.
 
 - type: entity
