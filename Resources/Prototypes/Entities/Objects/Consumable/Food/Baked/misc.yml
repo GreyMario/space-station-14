@@ -497,6 +497,9 @@
   - type: Item
     shape:
     - 0,0,2,1
+  - type: Food
+    utensil: RequiresSlicing
+    utensilRequired: true
   - type: SolutionContainerManager
     solutions:
       food:
@@ -551,6 +554,10 @@
   - type: Item
     shape:
     - 0,0,2,1
+- type: Food
+    utensil: RequiresSlicing
+    utensilRequired: true
+    transferAmount: 17
   - type: SolutionContainerManager
     solutions:
       food:
