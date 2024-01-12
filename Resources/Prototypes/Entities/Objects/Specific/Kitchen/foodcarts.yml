@@ -49,7 +49,9 @@
     - type: Storage
       maxItemSize: Large #so you can put a whole pizza inside
       grid:
-      - 0,0,7,4
+      - 0,0,3,3
+      - 5,0,6,3
+      - 8,0,11,3
     - type: TileFrictionModifier
       modifier: 0.4 # makes it slide
 
