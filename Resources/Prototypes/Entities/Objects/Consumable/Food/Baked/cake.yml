@@ -10,6 +10,8 @@
     flavors:
       - sweet
   - type: Food
+    utensil: RequiresSlicing
+    utensilRequired: true
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/cake.rsi
   - type: SolutionContainerManager
@@ -36,6 +38,8 @@
     flavors:
       - sweet
   - type: Food
+    utensil: None
+    utensilRequired: false
   - type: SolutionContainerManager
     solutions:
       food:
@@ -405,15 +409,6 @@
     state: pumpkinspice
   - type: SliceableFood
     slice: FoodCakePumpkinSlice
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 50
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 32
-        - ReagentId: Vitamin
-          Quantity: 11
   - type: Tag
     tags:
     - Fruit
@@ -426,15 +421,6 @@
   components:
   - type: Sprite
     state: pumpkinspice-slice
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 15
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 6.4
-        - ReagentId: Vitamin
-          Quantity: 2.2
   - type: Tag
     tags:
     - Fruit
@@ -660,6 +646,9 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 5
     baseSprintSpeed : 3
+  - type: Food
+    utensil: None
+    utensilRequired: false
   - type: Tag
     tags:
     - VimPilot
@@ -691,7 +680,7 @@
     state: suppermatter
   - type: SliceableFood
     slice: FoodCakeSuppermatterSlice
-    TotalCount: 8
+    count: 8
   - type: SolutionContainerManager
     solutions:
       food:
