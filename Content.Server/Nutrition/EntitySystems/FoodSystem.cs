@@ -119,7 +119,7 @@ public sealed class FoodSystem : EntitySystem
         if (!IsDigestibleBy(food, foodComp, stomachs))
             return (false, false);
 
-        if (!TryGetRequiredUtensils(user, foodComp, out _))
+        if (!TryGetRequiredUtensils(user, food, out _))
             return (false, false);
 
         // Check for used storage on the food item
@@ -207,7 +207,7 @@ public sealed class FoodSystem : EntitySystem
         if (args.Used is null || !_solutionContainer.TryGetSolution(args.Used.Value, args.Solution, out var soln, out var solution))
             return;
 
-        if (!TryGetRequiredUtensils(args.User, entity.Comp, out var utensils))
+        if (!TryGetRequiredUtensils(args.User, entity, out var utensils))
             return;
 
         // TODO this should really be checked every tick.
@@ -417,9 +417,10 @@ public sealed class FoodSystem : EntitySystem
         return digestible;
     }
 
-    private bool TryGetRequiredUtensils(EntityUid user, FoodComponent component,
+    private bool TryGetRequiredUtensils(EntityUid user, EntityUid food,
         out List<EntityUid> utensils, HandsComponent? hands = null)
     {
+        var component = Comp<FoodComponent>(food);
         utensils = new List<EntityUid>();
 
         if (component.Utensil == UtensilType.None)
@@ -448,7 +449,10 @@ public sealed class FoodSystem : EntitySystem
         // If "required" field is set, try to block eating without proper utensils used
         if (component.UtensilRequired && (usedTypes & component.Utensil) != component.Utensil)
         {
-            _popup.PopupEntity(Loc.GetString("food-you-need-to-hold-utensil", ("utensil", component.Utensil ^ usedTypes)), user, user);
+            if (component.Utensil == UtensilType.RequiresSlicing)
+                _popup.PopupEntity(Loc.GetString("food-system-requires-slicing", ("food", food)), user, user);
+            else
+                _popup.PopupEntity(Loc.GetString("food-you-need-to-hold-utensil", ("utensil", component.Utensil ^ usedTypes)), user, user);
             return false;
         }
 

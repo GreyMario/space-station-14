@@ -44,6 +44,7 @@ namespace Content.Server.Nutrition.Components
         None = 0,
         Fork = 1,
         Spoon = 1 << 1,
-        Knife = 1 << 2
+        Knife = 1 << 2,
+        RequiresSlicing = 1 << 7 // no utensil should ever have RequiresSlicing
     }
 }
